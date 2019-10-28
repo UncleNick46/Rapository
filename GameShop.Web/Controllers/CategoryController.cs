@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using GameShop.Core.DataModels;
 using GameShop.Core.Interfaces;
+using GameShop.Models;
 
 
 namespace GameShop.Web.Controllers
@@ -29,7 +30,7 @@ namespace GameShop.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Category category)
+        public IActionResult Create(ICategory category)
         {
             if (!ModelState.IsValid)
             {
@@ -47,7 +48,7 @@ namespace GameShop.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(Category category)
+        public IActionResult Update(ICategory category)
         {
             if (!ModelState.IsValid)
             {
@@ -62,6 +63,17 @@ namespace GameShop.Web.Controllers
         public IActionResult Delete(Guid id)
         {
             _categoryRepository.Delete(id);
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Category category)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
             return View();
         }
     }

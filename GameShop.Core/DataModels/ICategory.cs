@@ -2,7 +2,7 @@
 
 namespace GameShop.Core.DataModels
 {
-    public class Category
+    public class ICategory
     {
         public Guid Id { get; set; }
         public string Title { get; set; }

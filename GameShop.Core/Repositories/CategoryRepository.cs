@@ -7,7 +7,7 @@ namespace GameShop.Core.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {
-        public void Insert(Category item)
+        public void Insert(ICategory item)
         {
             throw new NotImplementedException();
         }
@@ -17,22 +17,22 @@ namespace GameShop.Core.Repositories
             throw new NotImplementedException();
         }
 
-        public Category Get(Guid id)
+        public ICategory Get(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Category item)
+        public void Update(ICategory item)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Category> Get(Func<Category, bool> filter)
+        public IEnumerable<ICategory> Get(Func<ICategory, bool> filter)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Category> GetAll()
+        public IEnumerable<ICategory> GetAll()
         {
             throw new NotImplementedException();
         }
